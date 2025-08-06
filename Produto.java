@@ -19,6 +19,10 @@ public class Produto {
         return nome + ", " + estoque + " disponiveis. preço: " + preço;
     }
 
+    public String listaEstoque() {
+        return nome +", " + estoque + "disponiveis. ";
+    }
+
     public String getNome() {
         return nome;
     }
