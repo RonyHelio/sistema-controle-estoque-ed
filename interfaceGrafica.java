@@ -5,16 +5,16 @@
 package lojaagricola;
 
 import javax.swing.*;
-import java.util.ArrayList;
 
 /**
- *
  * @author Usuario
  */
 public class interfaceGrafica extends javax.swing.JFrame {
 
     private Produto produtos[] = new Produto[999];
     private int indiceVetor = 0;
+    private String vendas[] = new String[999];
+    private int indiceVendas = 0;
 
     public interfaceGrafica() {
         initComponents();
@@ -152,72 +152,8 @@ public class interfaceGrafica extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 701, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton7))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton8))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton9))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jButton10)))
-                .addContainerGap(146, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
-        );
+        layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout.createSequentialGroup().addGap(154, 154, 154).addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 701, javax.swing.GroupLayout.PREFERRED_SIZE)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton3)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton4)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton5)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton6)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton7)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton8)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton9)).addGroup(layout.createSequentialGroup().addGap(66, 66, 66).addComponent(jButton10))).addContainerGap(146, Short.MAX_VALUE)));
+        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout.createSequentialGroup().addGap(30, 30, 30).addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE).addGap(72, 72, 72).addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE).addContainerGap(141, Short.MAX_VALUE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -240,10 +176,9 @@ public class interfaceGrafica extends javax.swing.JFrame {
 
     // Botão do mostrar produto:
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        if (indiceVetor > produtos.length) {
-            JOptionPane.showMessageDialog(this,"Lista de produtos vazia! ");
-        } else
-            JOptionPane.showMessageDialog(this,BuilderListaProdutos());
+        if (indiceVetor == 0) {
+            JOptionPane.showMessageDialog(this, "Lista de produtos vazia! ");
+        } else JOptionPane.showMessageDialog(this, BuilderListaProdutos());
     }
 
     // Metodo para transformar a lista de produtos em uma unica String:
@@ -256,55 +191,177 @@ public class interfaceGrafica extends javax.swing.JFrame {
         return textoProdutos.toString();
     }
 
-    // Botão do ordenar produtos por nome usando MergeSort:
+    // Botão de ordenar produtos por nome usando MergeSort:
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (indiceVetor == 0) {
+            JOptionPane.showMessageDialog(this, "Lista de produtos vazia!");
+            return;
+        }
 
+        mergeSort(produtos, 0, indiceVetor - 1);
+        JOptionPane.showMessageDialog(this, "Produtos ordenados por nome:\n" + BuilderListaProdutos());
     }
 
+    private void mergeSort(Produto[] vetor, int inicio, int fim) {
+        if (inicio < fim) {
+            int meio = (inicio + fim) / 2;
+            mergeSort(vetor, inicio, meio);
+            mergeSort(vetor, meio + 1, fim);
+            intercalar(vetor, inicio, meio, fim);
+        }
+    }
 
-  
+    private void intercalar(Produto[] vetor, int inicio, int meio, int fim) {
+        Produto[] aux = new Produto[vetor.length];
+
+        // Copia os elementos para o vetor auxiliar
+        for (int i = inicio; i <= fim; i++) {
+            aux[i] = vetor[i];
+        }
+
+        int i = inicio;
+        int j = meio + 1;
+        int k = inicio;
+
+        while (i <= meio && j <= fim) {
+            if (aux[i].getNome().compareToIgnoreCase(aux[j].getNome()) <= 0) {
+                vetor[k] = aux[i];
+                i++;
+            } else {
+                vetor[k] = aux[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= meio) {
+            vetor[k] = aux[i];
+            k++;
+            i++;
+        }
+    }
+
 
     // Botão de repor produtos no estoque:
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
-
+        String nome = JOptionPane.showInputDialog("Digite o nome do produto:");
+        for (int i = 0; i < indiceVetor; i++) {
+            if (produtos[i].getNome().equalsIgnoreCase(nome)) {
+                int qtd = Integer.parseInt(JOptionPane.showInputDialog("Quantidade a adicionar:"));
+                produtos[i].setEstoque(produtos[i].getEstoque() + qtd);
+                JOptionPane.showMessageDialog(this, "Estoque atualizado!");
+                return;
+            }
+        }
+        JOptionPane.showMessageDialog(this, "Produto não encontrado.");
     }
+
 
     // Botão de vender um produto:
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
-
+        String nome = JOptionPane.showInputDialog("Digite o nome do produto que deseja vender: ");
+        for (int i = 0; i < indiceVetor; i++) {
+            if (produtos[i].getNome().equalsIgnoreCase(nome)) {
+                int qtd = Integer.parseInt(JOptionPane.showInputDialog("Digite a qtd que deseja vender: "));
+                if (produtos[i].getEstoque() >= qtd) {
+                    produtos[i].setEstoque(produtos[i].getEstoque() - qtd);
+                    double valorVenda = qtd * produtos[i].getPreço();
+                    String relatorioVenda = "VENDA Nº: " + (indiceVendas + 1) + " |PRODUTO: " + produtos[i].getNome() + " . QTD: " + qtd + " || TOTAL: " + String.format("%.2f", valorVenda) + ".";
+                    vendas[indiceVendas] = relatorioVenda;
+                    indiceVendas++;
+                    JOptionPane.showMessageDialog(this, "Produto vendido! ");
+                    return;
+                } else {
+                    JOptionPane.showMessageDialog(this, "Estoque insuficiente! Não foi possivel realizar a venda.");
+                    return;
+                }
+            }
+        }
+        JOptionPane.showMessageDialog(this, "Produto não localizado. Digite corretamente! ");
     }
+
 
     // Botão de buscar informação de um produto:
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {
+        String nome = JOptionPane.showInputDialog("Digite o nome do produto:");
+        for (int i = 0; i < indiceVetor; i++) {
+            if (produtos[i].getNome().equalsIgnoreCase(nome)) {
+                JOptionPane.showMessageDialog(this, "Produto encontrado:\n" + produtos[i].toString());
+                return;
+            }
+        }
+        JOptionPane.showMessageDialog(this, "Produto não encontrado.");
     }
 
 
     // Botão de editar caracteristicas de um produto:
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {
-
+        String nome = JOptionPane.showInputDialog("Digite o nome do produto a editar:");
+        for (int i = 0; i < indiceVetor; i++) {
+            if (produtos[i].getNome().equalsIgnoreCase(nome)) {
+                produtos[i].setNome(JOptionPane.showInputDialog("Novo nome:", produtos[i].getNome()));
+                produtos[i].setPreço(Double.parseDouble(JOptionPane.showInputDialog("Novo preço:", produtos[i].getPreço())));
+                produtos[i].setEstoque(Integer.parseInt(JOptionPane.showInputDialog("Novo estoque:", produtos[i].getEstoque())));
+                JOptionPane.showMessageDialog(this, "Produto atualizado!");
+                return;
+            }
+        }
+        JOptionPane.showMessageDialog(this, "Produto não encontrado.");
     }
 
 
     // Aplicar alteração de preço em todos os produtos:
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {
-
+        logicaReajuste(produtos);
+        JOptionPane.showMessageDialog(this, "Produtos reajustado!");
     }
 
     // Metodo de reajuste de preço:
-    private void reajustePreco(double porcentagem, Produto produto) {
-        for (Produto)
+    private void logicaReajuste(Produto[] p) {
+        double porcent = Double.parseDouble(JOptionPane.showInputDialog("Digite a % do reajuste de todos produtos da loja: "));
+        for (int i = 0; i < indiceVetor; i++) {
+            p[i].setPreço(valorReajustado(porcent, p[i].getPreço()));
+        }
+    }
 
+
+    private double valorReajustado(double porcent, Double preçoProduto) {
+        double Reajuste = (preçoProduto + (preçoProduto * porcent / 100));
+        return Reajuste;
     }
 
     // Mostrar relatório de venda:
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {
 
+        if (indiceVendas == 0) {
+            JOptionPane.showMessageDialog(this, "Não houve vendas! ");
+        } else JOptionPane.showMessageDialog(this, BuilderListaVenda());
+
+    }
+
+    // Builder do relatorio de vendas:
+    private String BuilderListaVenda() {
+        StringBuilder textoVenda = new StringBuilder();
+        for (int i = 0; i < indiceVendas; i++) {
+            textoVenda.append(vendas[i]).append("\n");
+        }
+        return textoVenda.toString();
     }
 
 
     // Mostrar relatorio de estoque:
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(this, BuilderListaEstoque());
+    }
 
+    // Builder do estoque
+    private String BuilderListaEstoque() {
+        StringBuilder textoEstoque = new StringBuilder();
+        for (int i = 0; i < indiceVetor; i++) {
+            Produto p = produtos[i];
+            textoEstoque.append(p.listaEstoque()).append("\n");
+        }
+        return textoEstoque.toString();
     }
 
     /**
@@ -314,7 +371,7 @@ public class interfaceGrafica extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
